@@ -1,0 +1,16 @@
+//File RPC-Explained.acf
+[
+	// This interface will use an implicit binding handle named hImplicit1Binding.
+	implicit_handle(handle_t hImplicitBinding)
+]
+interface ImplicitNavigation
+{
+}
+
+[
+	// This interface will use an explicit binding handle named hExplicit1Binding.
+	explicit_handle
+]
+interface ExplicitNavigation
+{
+}

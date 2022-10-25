@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IDL", "IDL", "{DC3B7D12-DEA1-4BFD-AD95-30C9BFE525B0}"
+	ProjectSection(SolutionItems) = preProject
+		IDL\RPC-Explained.acf = IDL\RPC-Explained.acf
+		IDL\RPC-Explained.idl = IDL\RPC-Explained.idl
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPCClient", "RPCClient\RPCClient.vcxproj", "{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPCServer", "RPCServer\RPCServer.vcxproj", "{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Debug|x64.ActiveCfg = Debug|x64
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Debug|x64.Build.0 = Debug|x64
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Debug|x86.ActiveCfg = Debug|Win32
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Debug|x86.Build.0 = Debug|Win32
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Release|x64.ActiveCfg = Release|x64
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Release|x64.Build.0 = Release|x64
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Release|x86.ActiveCfg = Release|Win32
+		{C73E2A01-562C-4124-A9F4-83AB2BC5DAA5}.Release|x86.Build.0 = Release|Win32
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Debug|x64.ActiveCfg = Debug|x64
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Debug|x64.Build.0 = Debug|x64
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Debug|x86.ActiveCfg = Debug|Win32
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Debug|x86.Build.0 = Debug|Win32
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Release|x64.ActiveCfg = Release|x64
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Release|x64.Build.0 = Release|x64
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Release|x86.ActiveCfg = Release|Win32
+		{BBD851DF-1BC0-499A-BAA7-FBE4B0B5E511}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B2E4EFB-9FFE-44A6-82CD-86919DCA3EAF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/RPC-Explained
+/Debug
+/Release
+/RPCClient/Debug
+/RPCClient/Release
+/RPCClient/x64/Debug
+/RPCServer/x64/Debug
+/RPCServer/Release
+/RPCServer/Debug
+/x64/Debug/RPCServer.pdb
+/x64/Debug/RPCServer.exe
+/x64/Debug/RPCClient.pdb
+/x64/Debug

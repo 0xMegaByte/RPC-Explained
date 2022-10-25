@@ -1,0 +1,94 @@
+//Compile with: midl.exe /acf RPC-Explained.acf RPC-Explained.idl
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+typedef struct _Coordinates
+{
+	long double m_ldLongitude;
+	long double m_ldLatitude;
+} Coordinates;
+
+typedef long RPC_STATUS;
+
+[
+	//Generate a new uuid by executing 'uuidgen' command in cmd
+	uuid(C101CC70-724A-42B6-A7AF-DB0A587CBC12),
+	version(1.0)
+]
+interface ImplicitNavigation
+{
+	//Create and Initialize server's instance
+	void Imp_InitializeNavigationServer();
+
+	//Destroy server's instance
+	void Imp_TerminateNavigationServer();
+
+
+	//Get spaceship's current coordiantes
+	RPC_STATUS Imp_GetCurrentLocation(
+		[out, retval] Coordinates* pLocation
+	);
+
+	//Set spaceship's destination
+	RPC_STATUS Imp_SetDestination(
+		[in, string] BSTR pwcsDestination
+	);
+
+	//Get spaceship's destination
+	RPC_STATUS Imp_GetDestination(
+		[out, retval] BSTR* ppwcsDestination
+	);
+
+	//Navigate spaceship to destination
+	RPC_STATUS Imp_NavigateSpaceship();
+
+	//Stop Navigate spaceship
+	RPC_STATUS Imp_StopNavigation();
+
+	//Get Available destinations
+	RPC_STATUS Imp_GetAvailableDestinations(
+		[out, retval] BSTR* ppwcsDestinations
+	);
+}
+
+[
+	//Generate a new uuid by executing 'uuidgen' command in cmd
+	uuid(6C744748-B04B-4537-B97B-F79710C03975),
+	version(1.0)
+	// This interface will use explicit binding handle.
+	explicit_handle
+]
+interface ExplicitNavigation
+{
+	void Exp_InitializeNavigationServer(
+		[in] handle_t hBinding
+	);
+	void Exp_TerminateNavigationServer(
+		[in] handle_t hBinding
+	);
+
+	RPC_STATUS Exp_GetCurrentLocation(
+		[in] handle_t hBinding,
+		[out, retval] Coordinates* pLocation
+	);
+	RPC_STATUS Exp_SetDestination(
+		[in] handle_t hBinding,
+		[in, string] BSTR pwcsDestination
+	);
+	RPC_STATUS Exp_GetDestination(
+		[in] handle_t hBinding,
+		[out, retval] BSTR* ppwcsDestination
+	);
+	RPC_STATUS Exp_NavigateSpaceship(
+		[in] handle_t hBinding
+	);
+	RPC_STATUS Exp_StopNavigation(
+		[in] handle_t hBinding
+	);
+	RPC_STATUS Exp_GetAvailableDestinations(
+		[in] handle_t hBinding,
+		[out, retval] BSTR* ppwcsDestinations
+	);
+}
+
