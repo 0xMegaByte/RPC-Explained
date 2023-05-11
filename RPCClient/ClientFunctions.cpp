@@ -192,6 +192,9 @@ void UserInputLoop(handle_t hBinding)
 				else if (_strcmpi(pcToken, "navigate") == 0)
 					ParseUserInput(ERpcServerCommandType::SC_NAVIGATE, ERpcArgumentType::ARG_NONE, nullptr, hBinding);
 
+				else if (_strcmpi(pcToken, "?") == 0 || _strcmpi(pcToken, "help") == 0)
+					PrintHelpRPCClient();
+
 				else
 					CLIENT_OUT("Invalid command\n");
 				break;
@@ -254,6 +257,23 @@ void PrintRPCClient()
 ################################################
 Made by Matan Shitrit (0xMegaByte) 2022.
 ################################################
+		)" << "\n";
+}
+void PrintHelpRPCClient()
+{
+	std::wcout <<
+		R"(
+COMMANDS
+--------
+terminate		- Terminate the connection to the server.
+stop			- Stops the spaceship.
+navigate		- Navigates the spaceship to the chosen destination.
+
+get location		- Gets spaceship's coordinates
+get destination		- Gets spaceship's destination
+get destinations	- Gets available destinations
+
+set destination		- Sets spaceship's destination (use 'get destinations' command to get available destinations)
 		)" << "\n";
 }
 

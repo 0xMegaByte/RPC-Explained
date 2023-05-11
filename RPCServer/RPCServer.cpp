@@ -45,6 +45,7 @@ int main()
 	// calls for all registered interfaces.
 	// This call will not return until
 	// RpcMgmtStopServerListening is called.
+	//TODO: Move to a separated thread
 	CHECK(RpcServerListen(
 		1,                                   // Recommended minimum number of threads.
 		RPC_C_LISTEN_MAX_CALLS_DEFAULT,      // Recommended maximum number of threads.
@@ -56,13 +57,13 @@ int main()
 		NULL,
 		0));
 
-	SERVER_OUT("ImplicitNavigation_v1_0_s_ifspec interface registered!\n");
+	SERVER_OUT("ImplicitNavigation_v1_0_s_ifspec interface unregistered!\n");
 
 	CHECK(RpcServerUnregisterIf(
 		ExplicitNavigation_v1_0_s_ifspec,
 		NULL,
 		0));
-	SERVER_OUT("ExplicitNavigation_v1_0_s_ifspec interface registered!\n");
+	SERVER_OUT("ExplicitNavigation_v1_0_s_ifspec interface unregistered!\n");
 
 	Sleep(5000);
 }
