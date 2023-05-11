@@ -51,6 +51,8 @@ int main()
 		{
 			if (hExplicitBInding)
 			{
+				CHECK(RpcEpResolveBinding(hExplicitBInding, ExplicitNavigation_v1_0_c_ifspec));
+
 				Exp_InitializeNavigationServer(hExplicitBInding);
 
 				UserInputLoop(hExplicitBInding);

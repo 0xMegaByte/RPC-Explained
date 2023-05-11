@@ -40,3 +40,4 @@ std::vector<std::string> SerializeUserInput(const std::string& refUserInput, cha
 
 void SetBindingType();
 void PrintRPCClient();
+void PrintHelpRPCClient();

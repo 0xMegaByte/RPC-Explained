@@ -43,7 +43,7 @@ RPC_STATUS Imp_SetDestination(BSTR pwcsDestination);
 RPC_STATUS Imp_GetDestination(BSTR* ppwcsDestination);
 RPC_STATUS Imp_NavigateSpaceship();
 RPC_STATUS Imp_StopNavigation();
-RPC_STATUS Imp_GetAvailableDestinations(BSTR* ppDestinations);
+RPC_STATUS Imp_GetAvailableDestinations(BSTR* ppwcDestinations);
 
 
 //------------------------------Explicit binding functions-----------------------------
